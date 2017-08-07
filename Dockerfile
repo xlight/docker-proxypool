@@ -1,4 +1,4 @@
-FROM python:slim
+FROM python:2-slim
 WORKDIR /www
 RUN pip install requests gevent lxml beautifulsoup4
 RUN apt-get update && apt-get install -y curl unzip && rm -rf /var/lib/apt/lists/* && apt-get purge -y --auto-remove
